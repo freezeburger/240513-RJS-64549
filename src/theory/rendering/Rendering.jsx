@@ -18,13 +18,27 @@ const Footer = () => {
     return (
         <footer>Footer</footer>
     );
-}
+};
+const FooterMemo = React.memo(Footer);
+FooterMemo.displayName = 'FooterMemo';
 
 
+const Rendering = function () {
 
-const Rendering = () => {
+    const [state /* getter */, setState /* setter */] = React.useState(0);
+
+    // let state = 0
+
+    const handleClick = () => {
+        //state = state + 1;
+        setState(state => state + 1 );
+        console.log(state);
+    }
+
     return(
         <>
+            <button onClick={handleClick}>{state}</button>
+            <hr />
             <Header />
             <Main />
             <Footer />
