@@ -11,10 +11,7 @@ function App() {
     <React.Fragment>
      APPLICATION
      <hr />
-     {/* <NoAsync/> */}
-     {/* <AsyncTask></AsyncTask> */}
-     {/* <AsyncTimer></AsyncTimer> */}
-     <AsyncWorker></AsyncWorker>
+
     </React.Fragment>
   )
 }

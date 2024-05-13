@@ -2,11 +2,11 @@
 
 function AsyncWorker() {
   
-    const w = new Worker('worker.js');
+    const w = new Worker('/worker.js');
 
-    w.onmessage( msg  => {
+    w.onmessage =  msg  => {
         console.log( msg );
-    });
+    };
 
     return('AsyncWorker')
 }
