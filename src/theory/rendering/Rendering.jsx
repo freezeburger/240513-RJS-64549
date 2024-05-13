@@ -15,13 +15,10 @@ class Main extends React.Component {
     }
 }
 
-const Footer = (props) => {
+const Footer = (props = {text:'default'}) => {
     return (
         <footer>Footer {props.text }</footer>
     );
-};
-Footer.defaultProps = {
-    text: 'default'
 };
 Footer.propTypes = {
     text: PropTypes.string
@@ -35,13 +32,12 @@ const Rendering = function () {
 
     const [state /* getter */, setState /* setter */] = React.useState(0);
 
-    // let state = 0
 
-    const handleClick = () => {
+    const handleClick = React.useCallback(() => {
         //state = state + 1;
         setState(state => state + 1 );
         console.log(state);
-    }
+    },[/* no dependencies */]);
 
     return(
         <>
@@ -49,7 +45,7 @@ const Rendering = function () {
             <hr />
             <Header />
             <Main />
-            <Footer text={ state < 5 ?'counting':'done'}/>
+            <FooterMemo text={ state < 5 ?'counting':'done'}/>
         </>
     );
 }
