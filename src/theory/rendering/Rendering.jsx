@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function Header(){
     return (
@@ -14,12 +15,19 @@ class Main extends React.Component {
     }
 }
 
-const Footer = () => {
+const Footer = (props) => {
     return (
-        <footer>Footer</footer>
+        <footer>Footer {props.text }</footer>
     );
 };
-const FooterMemo = React.memo(Footer);
+Footer.defaultProps = {
+    text: 'default'
+};
+Footer.propTypes = {
+    text: PropTypes.string
+}
+const compareProps = (prevProps, nextProps) => prevProps.text === nextProps.text;
+const FooterMemo = React.memo(Footer, compareProps);
 FooterMemo.displayName = 'FooterMemo';
 
 
@@ -41,7 +49,7 @@ const Rendering = function () {
             <hr />
             <Header />
             <Main />
-            <Footer />
+            <Footer text={ state < 5 ?'counting':'done'}/>
         </>
     );
 }
