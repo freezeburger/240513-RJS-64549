@@ -1,5 +1,5 @@
 
 import styled from 'styled-components';
 
-export const PageTemplatName = styled.div`
+export const TemplateNameWrapper = styled.div`
 `;

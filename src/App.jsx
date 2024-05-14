@@ -1,18 +1,13 @@
 import React from 'react'
 import './App.css'
-import Rendering from './theory/rendering/Rendering'
+import PageHome from './pages/PageHome/PageHome.lazy'
 
 
 function App() {
 
   return (
-    <React.Fragment>
-      APPLICATION
-      <hr />
-      <pre>
-      <Div/>
-      </pre>
-      <Rendering />
+    <React.Fragment> 
+      <PageHome />
     </React.Fragment>
   )
 }
