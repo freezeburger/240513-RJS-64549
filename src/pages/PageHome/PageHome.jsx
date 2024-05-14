@@ -13,12 +13,6 @@ const PageHome = ( props = {} ) => (
          <div>LayoutResponsiveTile Component</div>
          <div>LayoutResponsiveTile Component</div>
          <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
     </LayoutResponsiveTile>
  </PageHomeWrapper>
 );

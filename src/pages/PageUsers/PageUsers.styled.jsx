@@ -1,5 +1,5 @@
 
 import styled from 'styled-components';
 
-export const PagUsersWrapper = styled.div`
+export const PageUsersWrapper = styled.div`
 `;

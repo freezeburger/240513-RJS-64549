@@ -1,10 +1,11 @@
 
 import React from 'react';
 import { PageUsersWrapper } from './PageUsers.styled';
+import FeatUsers from '../../features/FeatUsers/FeatUsers.lazy';
 
 const PageUsers = ( props = {} ) => (
  <PageUsersWrapper>
-    PageHome Component
+   <FeatUsers></FeatUsers>
  </PageUsersWrapper>
 );
 
