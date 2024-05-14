@@ -28,10 +28,9 @@ const FooterMemo = React.memo(Footer, compareProps);
 FooterMemo.displayName = 'FooterMemo';
 
 
-const Rendering = function () {
+const useCounter = () => {
 
     const [state /* getter */, setState /* setter */] = React.useState(0);
-
 
     const handleClick = React.useCallback(() => {
         //state = state + 1;
@@ -39,13 +38,26 @@ const Rendering = function () {
         console.log(state);
     },[/* no dependencies */]);
 
+    return [state, handleClick];
+}
+
+
+const CounterButton = () => {
+    const [state, handleClick] = useCounter();
+    return (
+        <button onClick={handleClick}>{state}</button>
+    );
+}
+
+const Rendering = function () {
+
     return(
         <>
-            <button onClick={handleClick}>{state}</button>
+            <CounterButton />
             <hr />
             <Header />
             <Main />
-            <FooterMemo text={ state < 5 ?'counting':'done'}/>
+            <FooterMemo/>  {/* text={ state < 5 ?'counting':'done'}/> */}
         </>
     );
 }

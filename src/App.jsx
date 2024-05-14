@@ -9,6 +9,9 @@ function App() {
     <React.Fragment>
       APPLICATION
       <hr />
+      <pre>
+      <Div/>
+      </pre>
       <Rendering />
     </React.Fragment>
   )
