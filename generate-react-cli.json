@@ -8,7 +8,13 @@
       "withStyle": true,
       "withTest": true,
       "withStory": true,
-      "withLazy": false
+      "withLazy": false,
+      "customTemplates": {
+        "component": "templates/default/TemplateName.jsx",
+        "story":  "templates/default/TemplateName.stories.jsx",
+        "style": "templates/default/TemplateName.styled.jsx",
+        "test": "templates/default/TemplateName.test.jsx"
+      }
     },
     "page": {
       "path": "src/pages",
@@ -27,14 +33,25 @@
       "withStyle": true,
       "withTest": false,
       "withStory": false,
-      "withLazy": true
+      "withLazy": true,
+      "customTemplates": {
+        "component": "templates/layout/TemplateName.jsx",
+        "lazy":  "templates/layout/TemplateName.lazy.jsx",
+        "style": "templates/layout/TemplateName.styled.jsx"
+      }
     },
     "feature": {
       "path": "src/features",
       "withStyle": false,
       "withTest": true,
       "withStory": true,
-      "withLazy": true
+      "withLazy": true,
+      "customTemplates": {
+        "component": "templates/feature/TemplateName.jsx",
+        "lazy":  "templates/feature/TemplateName.lazy.jsx",
+        "story":  "templates/default/TemplateName.stories.jsx",
+        "test": "templates/feature/TemplateName.test.jsx"
+      }
     }
   }
 }
