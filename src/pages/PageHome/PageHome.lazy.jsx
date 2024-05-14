@@ -8,5 +8,6 @@ const PageHome = props => (
     <LazyPageHome {...props} />
   </Suspense>
 );
+PageHome.displayName = 'PageHomeLazy';
 
 export default PageHome;
