@@ -43,7 +43,7 @@ const middleware = store => next => action => {
 
 export const store = configureStore({
     reducer,
-    middleware: [middleware],
+    middlewares: [middleware],
     preloadedState: initialState,
     devTools: { name: 'FeatUsers' }
 })

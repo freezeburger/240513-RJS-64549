@@ -1,6 +1,5 @@
 
 import React, { useCallback } from 'react';
-import { FeatUsersListWrapper } from './FeatUsersList.styled';
 import { useCustomerStore } from '../hooks/user-customer-store.hook';
 import LayoutResponsiveTile from '../../../layouts/LayoutResponsiveTile/LayoutResponsiveTile';
 
@@ -13,7 +12,7 @@ const FeatUsersList = (props = {}) => {
    }, [dispatch, ActionTypes]);
 
    return (
-      <FeatUsersListWrapper>
+      <>
          <h2>User List </h2>
          <button onClick={ handleClick }>Refresh or Load List</button>
          <hr />
@@ -24,7 +23,7 @@ const FeatUsersList = (props = {}) => {
                ))
             }
          </LayoutResponsiveTile>
-      </FeatUsersListWrapper>
+      </>
    )
 };
 
