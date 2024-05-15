@@ -8,7 +8,7 @@ const FeatUsersList = (props = {}) => {
    const [state, dispatch, ActionTypes] = useCustomerStore();
 
    const handleClick = useCallback(() => {
-      dispatch({ type: ActionTypes.USER_LIST_REQUEST });
+      dispatch({ type: ActionTypes.USERS_LIST_REQUEST });
    }, [dispatch, ActionTypes]);
 
    return (

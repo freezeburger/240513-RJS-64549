@@ -9,7 +9,7 @@ const initialState = {
 
 export const ActionTypes = {
     USERS_LIST_REQUEST: 'USERS_LIST_REQUEST',
-    USER_LIST_UPDATE: 'USER_LIST_UPDATE',
+    USERS_LIST_UPDATE: 'USER_LIST_UPDATE',
     USER_CREATION_REQUEST: 'USER_CREATION_REQUEST',
     USER_CREATION_UPDATE: 'USER_CREATION_UPDATE'
 }
@@ -18,7 +18,7 @@ const reducer = (state = initialState, action) => {
     console.log('reducer', action);
     
     switch(action.type) {
-        case ActionTypes.USER_LIST_UPDATE:
+        case ActionTypes.USERS_LIST_UPDATE:
             return {
                 ...state,
                 users: action.payload,
@@ -35,7 +35,7 @@ const middleware = store => next => action => {
 
     if(action.type === ActionTypes.USERS_LIST_REQUEST) {
         fetchUsers().then(data => store.dispatch({
-            type: ActionTypes.USER_LIST_UPDATE,
+            type: ActionTypes.USERS_LIST_UPDATE,
             payload: data
         }));
     }
