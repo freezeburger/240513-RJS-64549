@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ApiUsersContext } from "../../../contexts/api-users.context";
 
-
-const ENDPOINT = 'http://localhost:5050/users';
-
-const fetchUsers = async () => {
-    const response = await fetch(ENDPOINT);
+const fetchUsers = async ( url ) => {
+    const response = await fetch(url);
     const data = await response.json();
     return data;
 };
@@ -14,10 +12,12 @@ const fetchUsers = async () => {
  */
 export const useCustomerApi = () => {
 
+    const ENDPOINT = useContext(ApiUsersContext);
+
     const [users, setUsers] = React.useState([]);
 
     React.useEffect(() => {
-        fetchUsers().then(data => setUsers(data));
+        fetchUsers(ENDPOINT).then(data => setUsers(data));
     },[])
 
     return users;

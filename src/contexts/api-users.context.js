@@ -1,4 +1,4 @@
 import { createContext } from 'react';
 
 
-export const ApiUsers = createContext(import.meta.env.VITE_ENDPOINT_USERS);
+export const ApiUsersContext = createContext(import.meta.env.VITE_ENDPOINT_USERS);
