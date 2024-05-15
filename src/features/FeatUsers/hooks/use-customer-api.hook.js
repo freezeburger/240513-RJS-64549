@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ApiUsersContext } from "../../../contexts/api-users.context";
+import { ApiUsersContext } from "@contexts";
 
 const fetchUsers = async ( url ) => {
     const response = await fetch(url);
