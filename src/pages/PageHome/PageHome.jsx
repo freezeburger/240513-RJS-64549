@@ -1,19 +1,15 @@
 
 import React from 'react';
 import { PageHomeWrapper } from './PageHome.styled';
-import LayoutResponsiveTile from '../../layouts/LayoutResponsiveTile/LayoutResponsiveTile.lazy';
+import FeatUserCount from '../../features/FeatUsers/FeatUserCount/FeatUserCount';
+import FeatUsersList from '../../features/FeatUsers/FeatUsersList/FeatUsersList';
 
 const PageHome = ( props = {} ) => (
  <PageHomeWrapper>
-    PageHome Component
-    <LayoutResponsiveTile size={250}>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-         <div>LayoutResponsiveTile Component</div>
-    </LayoutResponsiveTile>
+   
+    <FeatUserCount></FeatUserCount>
+    <FeatUsersList></FeatUsersList>
+
  </PageHomeWrapper>
 );
 
